@@ -1,11 +1,13 @@
+package Package19;
+
 import java.util.Scanner;
 public class CollegeList{
 
     public static void main(String[] args) {
-      Scanner scan = new Scanner (System.in);
+        Scanner scan = new Scanner (System.in);
 
-      System.out.println ("Press S for Students, Press F for Faculty, Press E for Employee: ");
-      String choice = scan.nextLine();
+        System.out.println ("Press S for Students, Press F for Faculty, Press E for Employee: ");
+        String choice = scan.nextLine();
 
         scan.nextLine();
 
@@ -55,13 +57,13 @@ public class CollegeList{
 
         }else if(choice.equalsIgnoreCase("F")){
             System.out.print("Are you regular or tenured faculty member? Y/N: ");
-           String response = scan.nextLine();
+            String response = scan.nextLine();
 
             System.out.println("Type employee's name, contact number, salary, " +
                     "and department. Press Enter once you entered an input.");
 
 
-            scan.nextLine();
+            
             String name = scan.nextLine();
             String contactNum = scan.nextLine();
             double salary = scan.nextDouble();
@@ -98,7 +100,7 @@ public class CollegeList{
 
     }
 }
-public class Person {
+class Person {
     private String name;
     private String contactNumber;
 
@@ -117,7 +119,7 @@ public class Person {
 
 
 }
-public class Student extends  Person {
+ class Student extends  Person {
     private String program;
     private int yearLevel;
 
@@ -134,7 +136,7 @@ public class Student extends  Person {
         return yearLevel;
     }
 }
-public class Employee extends Person {
+ class Employee extends Person {
     private double salary;
     private String department;
 
@@ -151,7 +153,7 @@ public class Employee extends Person {
         return department;
     }
 }
-public class Faculty extends  Employee {
+ class Faculty extends  Employee {
     private boolean status;
 
 
